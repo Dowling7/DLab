@@ -1,0 +1,5 @@
+gcc -c sample.c -o sample.o
+ar rcs libsample.a sample.o
+gcc -shared -o libsample.so sample.o
+gcc -o myprogram myprogram.c -L/path/to/library -lsample
+
